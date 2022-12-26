@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Red Rose', cursive;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+.container {
+  max-width: 1720px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,673 @@
+//подключение базовых стилей
+@import 'common/_reset';
+@import 'common/_fonts';
+@import 'common/_vars';
+@import 'common/_global';
+
+
+// подключение компонентов
+
+
+//код scss
+.header {
+  padding: 30px 0 100px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 75px;
+
+    ul {
+      display: flex;
+      column-gap: 40px;
+
+      li {
+        font-size: 18px;
+      }
+    }
+
+    .header__wallet {
+      font-size: 16px;
+      padding: 15px 30px;
+      background-color: $btn-color;
+      color: $bg-color;
+      border-radius: 50px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__content {
+      max-width: 550px;
+      margin-right: 50px;
+    }
+
+    h2 {
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      margin-bottom: 15px;
+      font-family: 'MonumentExtended';
+    }
+
+    h1 {
+      font-size: 72px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 70px;
+      font-family: 'MonumentExtended';
+    }
+
+    .header__explore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 65px;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      background-color: $btn-color;
+      color: $bg-color;
+      border-radius: 50px;
+      margin-bottom: 80px;
+    }
+
+    ul {
+      font-family: 'MonumentExtended';
+      display: flex;
+      gap: 120px;
+      text-align: center;
+      position: relative;
+      font-weight: 900;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -135px;
+        left: calc(50% - 100px);
+        background-image: url('../img/Creators.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 118px;
+        height: 50px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -135px;
+        right: calc(50% - 150px);
+        background-image: url('../img/arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 135.2px;
+        height: 119.81px;
+      }
+
+      p {
+        letter-spacing: 0.15em;
+      }
+
+      span {
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #818698;
+      }
+    }
+
+    .header__img {
+      position: relative;
+      border-radius: 150px;
+      box-shadow: 0 -15px 30px 1px #7f1cfc, 0 15px 30px 1px #59dcdc;
+      max-width: 775px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -100px;
+        background-image: url(../img/PlayIcon.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        backdrop-filter: blur(10px);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.popular {
+  padding-bottom: 120px;
+
+  h2 {
+    font-family: 'MonumentExtended';
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 245px;
+    height: 367px;
+    background-color: $second-bg-color;
+    border-radius: 50px;
+    padding: 10px;
+
+    a {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .arrows {
+    width: 70px;
+    height: 70px;
+    background-color: $second-bg-color;
+    border-radius: 50%;
+    top: 130px;
+    border: 2px solid $btn-color;
+    transition: all 0.5s;
+  }
+
+  .arrows:hover {
+    background-color: $btn-color;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 0;
+    background-image: url('../img/arrows.svg');
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-prev::after {
+    transform: rotate(180deg);
+  }
+}
+
+.collections {
+  padding: 140px 0 90px;
+  background-color: #1D1E22;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-family: 'MonumentExtended';
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      background-color: $second-bg-color;
+      padding: 5px;
+      border-radius: 20px;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+
+      button {
+        color: #FFFFFF;
+      }
+
+      button:first-child {
+        background: #1D1E22;
+        border-radius: 20px;
+        padding: 20px 45px;
+        margin-right: 35px;
+      }
+
+      button:nth-child(2) {
+        padding-right: 35px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    max-width: 520px;
+    width: 100%;
+    background-color: $second-bg-color;
+    padding: 10px 40px 10px 10px;
+
+    img {
+      margin-right: 24px;
+    }
+  }
+
+  &__box {
+
+    p {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 16px;
+      color: #818698;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+      color: #818698;
+      line-height: 1.6;
+    }
+
+    span:nth-child(3) {
+      color: $btn-color;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 180px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    border-radius: 50px;
+    color: #2C2D31;
+    background-color: $btn-color;
+  }
+}
+
+.tranding {
+  padding: 130px 0 120px;
+
+  h2 {
+    font-family: 'MonumentExtended';
+    margin-bottom: 70px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $btn-color;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 383px;
+    height: 550px;
+    background: #1D1E22;
+    border-radius: 30px;
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      margin-left: 15px;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      margin-left: 15px;
+    }
+
+    &__wrapper {
+      background: #2C2D31;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 20px;
+      margin: 30px 13px 13px;
+    }
+
+    &__inner {
+      padding: 15px 24px;
+
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        color: #999999;
+        margin-bottom: 10px;
+      }
+
+      span {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+}
+
+.insights {
+  padding: 120px 0;
+  background-color: #1D1E22;
+
+  .swiper {
+    max-width: 430px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    font-family: 'MonumentExtended';
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    max-width: 500px;
+
+    img {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+      color: $bg-color;
+      font-size: 12px;
+      line-height: 1;
+      padding: 5px 12px;
+      background: #F3F5F6;
+      box-shadow: 0px 1px 2px rgba(105, 81, 255, 0.05);
+      border-radius: 36px;
+      margin-right: 15px;
+    }
+
+    p {
+      font-family: 'MonumentExtended';
+      font-weight: 700;
+      font-size: 16px;
+      color: #DFE5F5;
+    }
+  }
+
+  h3 {
+    font-family: 'MonumentExtended';
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    min-height: 100px;
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    width: 156px;
+    height: 56px;
+    font-family: 'MonumentExtended';
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    padding-left: 18px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 25px;
+      top: calc(50% - 12px);
+      background-image: url('../img/arrowUp.svg');
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.ourapp {
+  padding: 120px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1D1E22;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    padding: 95px 200px 95px 75px;
+  }
+
+  p {
+    font-family: 'MonumentExtended';
+    max-width: 500px;
+    letter-spacing: 0.04em;
+    margin-right: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+
+    .app {
+      font-family: 'MonumentExtended';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 270px;
+      height: 70px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 20px;
+      padding-left: 40px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: relative;
+        left: -10px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__apple {
+    background-color: $second-bg-color;
+
+    &::before {
+      background-image: url('../img/apple.svg');
+    }
+  }
+
+  &__android {
+    background-color: $btn-color;
+    color: $second-bg-color;
+
+    &::before {
+      background-image: url('../img/android.svg');
+    }
+  }
+}
+
+.footer {
+  padding: 48px 0;
+  background-color: #1D1E22;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a>img {
+      margin-right: 10px;
+    }
+  }
+
+  &>ul {
+    max-width: 500px;
+    height: 215px;
+  }
+
+  ul>li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #DFE5F5;
+  }
+
+  ul>li>h4 {
+    font-size: 18px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+
+  form {
+    padding: 80px 50px;
+    background-color: $btn-color;
+    border-radius: 30px;
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -25px;
+      bottom: -25px;
+      background-image: url('../img/element.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 115px;
+      height: 83px;
+    }
+
+
+    &>label {
+      display: block;
+      max-width: 400px;
+      letter-spacing: 1.2px;
+      font-family: 'MonumentExtended';
+      font-weight: 900;
+      color: $bg-color;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #3FC9B0;
+    padding-bottom: 20px;
+
+    input {
+      font-size: 18px;
+      letter-spacing: 2px;
+      outline: none;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 1;
+        color: #1D1E22;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    &>p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #DFE5F5;
+    }
+
+    &>ul {
+      display: flex;
+      gap: 24px;
+    }
+
+    &>ul>li>a {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+// мобильный адаптив
+@import 'common/mobile'
